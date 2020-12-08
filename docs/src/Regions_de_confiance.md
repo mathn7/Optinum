@@ -124,6 +124,6 @@ où ``q(s)=g^{\top} s+\frac{1}{2} s^{\top} H_{k} s``
 ``\hspace*{1.5cm}`` f. ``\hspace*{0.4cm}`` ``g_{j+1}=g_{j}+\alpha_{j} H p_{j}\\`` 
 ``\hspace*{1.5cm}`` g. ``\hspace*{0.4cm}`` ``\beta_{j}=g_{j+1}^{T} g_{j+1} / g_{j}^{T} g_{j}\\``
 ``\hspace*{1.5cm}`` h. ``\hspace*{0.4cm}`` ``p_{j+1}=-g_{j+1}+\beta_{j} p_{j}\\``
-``\hspace*{1.5cm}`` i. ``\hspace*{0.4cm}`` Si la convergence est suffisante, poser ``s=s_{j+1}`` et sortir de la boucle.
+``\hspace*{1.5cm}`` i. ``\hspace*{0.4cm}`` Si la convergence est suffisante (``\|g_{j+1}\|\leq Tol\_rel\|g_0\|``), poser ``s=s_{j+1}`` et sortir de la boucle.
 
 ###### Retourner ``s``.

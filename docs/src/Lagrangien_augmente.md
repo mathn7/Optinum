@@ -17,7 +17,7 @@ L'algorithme suivant est obtenu de  Bierlaire, *Introduction à l'optimisation d
   
  
 ### Données : 
-``\mu_{0} > 0, \tau > 0, \hat{\eta}_{0}=0.1258925[^1] ,  \alpha=0.1, \beta=0.9, \epsilon_{0}=1 ,  \mu_{0}, \eta_{0}=\hat{\eta}_{0} / \mu_{0}^{\alpha}`` , et un point de départ du Lagrangien ``(x_{0},\lambda_{0})``. On pose ``k = 0``
+``\mu_{0} > 0, \tau > 0, \hat{\eta}_{0}=0.1258925[^1] ,  \alpha=0.1, \beta=0.9, \epsilon_{0}=1/\mu_{0}, \eta_{0}=\hat{\eta}_{0} / \mu_{0}^{\alpha}`` , et un point de départ du Lagrangien ``(x_{0},\lambda_{0})``. On pose ``k = 0``
 
 ### Sorties :
 une approximation de la solution du problème avec contraintes.
@@ -39,5 +39,8 @@ Si convergence de l'algorithme global, s'arrêter , sinon aller en b
 ``\left\{\begin{array}{l}\lambda_{k+1} =\lambda_{k} \\\mu_{k+1} =\tau \mu_{k} \\\epsilon_{k+1} =\epsilon_{0} / \mu_{k+1} \\\eta_{k+1} =\hat{\eta}_{0} / \mu_{k+1}^{\alpha} \\k=k+1\end{array}\right.``
   
 ### 2. Retourner ``x_{k},\lambda_{k},\mu_{k}`` . 
+
+### 3 Critère de convergence global
+``(\|\nabla f(x_k)\|\leq max(Tol\_rel\|\nabla f(x_0)\|,Tol\_abs))`` et ``(\|c(x_k)\|\leq max(Tol\_rel\|c(x_0)\|,Tol\_abs))``
 
 [^1] : Pour que ``\eta_0=0.1``.
