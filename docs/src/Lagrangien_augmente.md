@@ -41,6 +41,6 @@ Si convergence de l'algorithme global, s'arrêter , sinon aller en b
 ### 2. Retourner ``x_{k},\lambda_{k},\mu_{k}`` . 
 
 ### 3 Critère de convergence global
-``(\| \nabla_{x} L_{A}\left(x_x, \lambda_{k}, \mu_{k}\right) \|\leq max(Tol\_rel\| \nabla_{x} L_{A}\left(x_0, \lambda_{0}, \mu_{0}\right) \|,Tol\_abs))`` et ``(\|c(x_k)\|\leq max(Tol\_rel\|c(x_0)\|,Tol\_abs))``
+``(\| \nabla_{x} L_{A}\left(x_x, \lambda_{k}, 0 \right) \|\leq max(Tol\_rel\| \nabla_{x} L_{A}\left(x_0, \lambda_{0}, 0\right) \|,Tol\_abs))`` et ``(\|c(x_k)\|\leq max(Tol\_rel\|c(x_0)\|,Tol\_abs))``
 
 [^1] : Pour que ``\eta_0=0.1``.
