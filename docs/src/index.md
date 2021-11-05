@@ -1,9 +1,12 @@
 # Optinum - Méthodes numériques pour les problèmes d’optimisation
 
 ## Rendu
-Le projet est à rendre sous Moodle *le dimanche 20 décembre à 24h00*. Vous rendrez un fichier compressé `nom du binome .tgz` qui déarchivez contiendra un répertoire `nom du binome` qui lui-même contiendra votre répertoire Optinum. Votre notebook doit se trouver dans le sous répertoire src.
+Le projet est à rendre sous Moodle *le vendredi 17 décembre à 18h00*. Vous rendrez un fichier compressé `nom du binome .tgz` qui déarchivez contiendra un répertoire `votre nom` qui lui-même contiendra vos répertoire Optinum et TestOptinum. Votre notebook doit se trouver dans le sous répertoire `Optinum/src`.
 
 ## Instalation de julia et jupyter notebook sur vos machines
+
+### Introduction
+Dans les salles de TP, `julia` et `jupyter` sont déjà installés. 
 
 ### Installation de julia
 
@@ -43,15 +46,15 @@ Ce répertoire est un `Projet julia`, c'est-à-dire un ensemble de fichiers orga
   - une liste de packages externes que le projet peut utiliser
 - Un fichier `Manifest.toml`qui est optionnel et qui contient des versions de chacune des dépendances listées dans `Project.toml`
 - un fichier `src/Optinum.jl`qui est le fichier qui sera chargé par l'instruction `using` si le projet est utilisé comme dépendance d'un autre projet (ce qui n'est pas le cas ici).
-- un dépertoire `src` qui contient les sources `julia`
-- un dépertoire `docs` pour générer la documentation
+- un répertoire `src` qui contient les sources `julia`
+- un répertoire `docs` pour générer la documentation
 - un répertoire `test`pour les tests unitaires
 - un fichier `Markdown README.md` qui contient ce qui sera affiché sous un gestionaire du type `GitHub`.
 
 ### Soucis d'installation
 Sous `linux` après installation du package `IJulia` losque vous lancer un notebook situé dans `Optinum, jupyter notebook` va automatiquement se mettre dans l'environnement d'Optinum. Le soucis est que dans cet environnement vous n'avez pas les bonnes versions des packages. Afin d'avoir ces bonnes versions il vous faut dans la fenêtre de commande `julia` lancé à partir du répertoire `Optinum` : 
 
-- passez dans le mode  gestion des packages et de l'envirronenment (touche `backspace`)
+- passez dans le mode  gestion des packages et de l'envirronenment (touche `]`)
 
 - activer l'environnement `Optinum`  
 (@v1.4) pkg> activate .
@@ -77,9 +80,12 @@ Remarque : C'est dans le mode gestion des packages et de l'environnenment :
 
 **Il ne faut en aucun cas modifier la structuration** de ce projet, ni les interfaces des fonctions.
 
-Les fichiers `julia` que vous aurez à modifier se trouvent dans le répertoire `Optinum/src`. Ces fichiers sont : 
-1. `TP-Projet-Optinum.ipynb`: c'est un julia notebook dans lequel vous ferez toutes vos expérimentations numériques et répondrez aux questions posées. Ce fichier est à ouvrir avec `jupyter notebook`.
-2. Les fichiers `julia` qui codent les algorithmes demandés (voir le notebook).
+Les fichiers `julia` que vous aurez à modifier se trouvent 
+
+1. dans le répertoire `Optinum/src`. Ces fichiers sont : 
+    1. `TP-Projet-Optinum.ipynb`: c'est un julia notebook dans lequel vous ferez toutes vos expérimentations numériques et répondrez aux questions posées. Ce fichier est à ouvrir avec `jupyter notebook`.
+    2. Les fichiers `julia` qui codent les algorithmes demandés (voir le notebook).
+2. dans le répertoire `TestOptinum/src` pour compléter les tests unitaires.
 
 Enfin vous avez dans le répertoire `Optinum/julia` le fichier `notebook_Julia.pdf` d'introduction à `julia` et à l'utilisation des notebook et dans le répertoire `Optinum/julia/scr-julia` les notebook d'introduction au langage `julia`.
 
@@ -88,7 +94,6 @@ Remarque : vous pouvez travailler sur vos machine, mais vous pouvez aussi travai
 
 
 ## Organisation
-Le projet d'optimisation numérique est à réaliser en binôme (dans un même groupe de tp). Nous vous laissons vous organiser pour faire ces binômes (essayez d'avoir une personne à Toulouse et une à distance si possible). Lors des séances de tp, nous passerons 10 à 15 minutes par binôme dans les salons discords dédiés. Nous ne verrons donc pas nécessairement tous les binômes à chaque séance de tp. Durant ces recontres nous ferons un point d'avancement de votre projet et répondrons à vos questions. Ces rencontres seront en partie évaluées et ceci entrera dans la notation du projet.
-
+Le projet d'optimisation numérique est un projet individuel.
 
 ###### Auteurs : O.Cots, J. Gergaud, S. Gratton, P. Matalon, C. Royer, D. Ruiz et E. Simon
